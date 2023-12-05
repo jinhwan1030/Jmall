@@ -1,4 +1,2 @@
-# Jmall
-
 # Jmall-app
- - Jae-A mall app
+- Jae-A mall app
