@@ -1,4 +1,4 @@
-package fastcampus.part5.jmall
+package fastcampus.part5.jmall_app
 
 import org.junit.Test
 

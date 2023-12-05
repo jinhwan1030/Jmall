@@ -1,4 +1,4 @@
-package fastcampus.part5.jmall
+package fastcampus.part5.jmall_app
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("fastcampus.part5.jmall", appContext.packageName)
+        assertEquals("fastcampus.part5.jmall_app", appContext.packageName)
     }
 }
