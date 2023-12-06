@@ -16,6 +16,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import shopping.mall.jmall.ui.main.MainInsideScreen
 import shopping.mall.jmall.ui.theme.JmallTheme
 import shopping.mall.jmall.viewmodel.MainViewModel
 
@@ -49,7 +50,7 @@ fun MainScreen() {
             MainBottomNavigationBar(navController)
         }
     ) {
-        MainNavigationScreen(navController = navController)
+        MainNavigationScreen(viewModel = viewModel, navController = navController)
     }
 }
 
@@ -107,10 +108,10 @@ fun MainBottomNavigationBar(navController: NavHostController){
 }
 
 @Composable
-fun MainNavigationScreen(navController: NavHostController){
+fun MainNavigationScreen(viewModel: MainViewModel, navController: NavHostController){
     NavHost(navController = navController, startDestination = MainNavigationItem.Main.route) {
         composable(MainNavigationItem.Main.route){
-            Text(text = "Hello Main")
+            MainInsideScreen(viewModel)
         }
         composable(MainNavigationItem.Category.route){
             Text(text = "Hello Category")
